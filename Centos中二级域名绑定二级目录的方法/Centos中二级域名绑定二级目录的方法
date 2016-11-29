@@ -1,0 +1,37 @@
+对于一些目录，我们往往需要对其指定二级域名，那么具体如何操作呢?下面，我将用亲身实践来说明一下。
+
+　　由于第一次接触centos，我不得不借助于网络资源。然后得知要开启mod_rewrite这个模块，具体方法如下：
+
+　　用文本编辑器打开Apache安装目录/etc/httpd/conf\httpd.conf，找到“#LoadModule rewrite_module modules/mod_rewrite.so”这行，去掉前面的“#”;继续查找“AllowOverride None”，修改为“AllowOverride All”，然后，重启Apache即可。
+
+　　如此，就打开了mod_rewrite模块，其功能非常的强大，这里我只讲如何绑定二级域名。
+
+　　同样，我们在httpd.conf文件最后输入以下语句：
+
+　　RewriteEngine on
+
+　　RewriteMap lowercase int:tolower
+
+　　RewriteMap vhost txt:/etc/httpd/vhost.map
+
+　　RewriteCond ${lowercase:%{SERVER_NAME}} ^(.+)$
+
+　　RewriteCond ${vhost:%1} ^(/.*)$
+
+　　RewriteRule ^/(.*)$ %1/$1
+
+　　然后重启Apache
+
+　　这样，我们就能够自由设置绑定二级域名了。
+
+　　温馨提示：这个httpd.conf大家注意备份，我就曾经不小心误删，弄的极其的凄惨呀!!
+
+　　之后在/etc/httpd(即Apache安装目录)下新建一个vhost.map，用文本编辑器来绑定，极其简单，我的是这样写的：
+
+　　bbs.nvdchina.com /var/www/html/bbs
+
+　　home.nvdchina.com /var/www/html/home
+
+　　potplayer.nvdchina.com /var/www/html/potplayer
+
+　　我们可以随意把二级域名与目录绑定，保存就行，并且不用重启Apache，非常方便。
