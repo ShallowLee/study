@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery4</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var strAlt = $('img').attr('src');
+			console.log($('img').attr('title'));
+			$("#divAlt").html(strAlt);
+			$('img').attr('title','这个不是一个风景画')
+		})
+	</script>
+</head>
+<body>
+	<img alt="" title="这是一幅风景画" src="img.jpg">
+	<div id="divAlt"></div>
+</body>
+</html>

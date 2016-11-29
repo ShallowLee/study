@@ -1,0 +1,14 @@
+table{
+	width: 100%;
+}
+input[type="text"]{
+	width:100%;
+}
+textarea{
+	width: 100%;
+}
+.tar{
+	text-align: right;
+}
+#article_edit{
+}

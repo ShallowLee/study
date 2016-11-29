@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery8</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		// $('p').click(function(){
+		// 	console.log('点了一个p标签');
+		// })
+		// $('p').mouseover(function(){
+		// 	console.log('点了一个p标签');
+		// })
+
+		$('p').hover(function(){
+			$(this).addClass('active')
+		},function(){
+			$(this).removeClass('active')
+		})
+	})
+	</script>
+	<style type="text/css">
+		.active{
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<p>点一下</p>
+</body>
+</html>

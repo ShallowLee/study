@@ -1,0 +1,76 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+p{
+	line-height: 1.5em;
+}
+a{
+	text-decoration: none;
+}
+.header{
+	background: url("images/banner.jpg");
+	background-size: 100% auto;
+}
+.header .title{
+	line-height: 200px;
+	text-align: center;
+	color:#fff;
+}
+.header .nav{
+	width:960px;
+	margin:0px auto;
+	list-style: none;
+	overflow: hidden;
+}
+.header .nav li{
+	float: left;
+}
+.header .nav li a{
+	display: block;
+	width:100px;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	color:#fff;
+	transition:color 1s;
+}
+.header .nav li a:hover{
+	color:orange;
+}
+.item img{
+	max-height:120px;
+	margin-right:15px;
+	float: left;
+}
+.item{
+	width:960px;
+	margin:0px auto;
+	border-bottom: 1px solid #ddd;
+	padding:15px 0px ;
+	padding-bottom:30px;
+}
+.item .title{
+	text-decoration: none;
+	font-size: 25px;
+	color:#333;
+}
+.item .time,.item .content{
+	margin-top:15px;
+	color:#999;
+}
+.item .read{
+	float: right;
+	color:#999;
+	line-height: 25px;
+}
+.item .readAll{
+	float: right;
+	color:#666;
+	font-size: 12px;
+}
+.body{
+	width:960px;
+	margin:0px auto;
+	padding:15px;
+}

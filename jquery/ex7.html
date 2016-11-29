@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery7</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('select').val('6');
+			$('input').val('66666');
+			$('input').change(function(){
+				var val = $('input').val();
+				debugger;
+				$('#p2').html(val);
+			})
+		})
+	</script>
+</head>
+<body>
+<select>
+	<option value="1">Item 1</option>
+	<option value="2">Item 2</option>
+	<option value="3">Item 3</option>
+	<option value="4">Item 4</option>
+	<option value="5">Item 5</option>
+	<option value="6">Item 6</option>
+</select>
+<p id="p1"></p>
+<input type="text" class="text">
+<p id="p2"></p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery8</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<style type="text/css">
+		.highLight{
+			font-weight: bold;
+			font-style: italic;
+			background-color:#eee;
+		}
+	</style>
+	<script type="text/javascript">
+	$(function(){
+		$('p').click(function(){
+			// $(this).addClass('highLight')
+			$(this).toggleClass('highLight')
+		})
+	})
+	</script>
+</head>
+<body>
+	<p>Hello Jquery</p>
+</body>
+</html>

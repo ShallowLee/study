@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+<title>javascript</title>
+<script type="text/javascript">
+  /*
+    提示:
+    一、定义"改变颜色"的属性
+      obj.style.backgroundColor
+    二、定义"改变宽高"的属性
+      obj.style.width
+    三、定义"隐藏内容"的属性
+      obj.style.display="none";
+    四、定义"显示内容"的属性
+      obj.style.display="block";
+  */
+</script>
+</head>
+<body>
+  <div id="d" style="background:gray;width:300px;height:300px;"></div>
+  <input onclick="changeColor()" type="button" value="改变颜色" >  
+  <input type="button" value="改变宽高" >
+  <input type="button" value="隐藏内容" >
+  <input type="button" value="显示内容" >
+
+  <script type="text/javascript">
+    //定义"改变颜色"的函数
+    function changeColor(){
+      var d = document.getElementById('d');
+      d.style.backgroundColor = 'red';
+    }
+    //定义"改变宽高"的函数
+    //定义"隐藏内容"的函数
+    //定义"显示内容"的函数
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>animate</title>
+	<style type="text/css">
+		@keyframes myanimate1{
+			from {background: red;}
+			to {background: yellow;}
+		}
+		#div1{
+			height:100px;
+			width:100px;
+			background:red;
+		}
+		#div1:hover{
+			animation: myanimate1 3s;
+		}
+
+		#div2{
+			height:100px;
+			width:100px;
+			background: red;
+			transition: background 3s;
+		}
+		#div2:hover{
+			background: yellow;
+		}
+
+		@keyframes myanimate2{
+			0%   {background: red;}
+			25%  {background: yellow;}
+			50%  {background: blue;}
+			100% {background: green;}
+		}
+		#div3{
+			width:100px;
+			height: 100px;
+			background: red;
+		}
+		#div3:hover{
+			animation: myanimate2 3s;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div id="div3"></div>
+</body>
+</html>

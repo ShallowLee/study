@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery4</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var strHTML = $('#divShow').html();
+			var strText= $('#divShow').text();
+			$('#divHtml').html(strHTML);
+			$('#divText').text(strText);
+		})
+	</script>
+</head>
+<body>
+<div id="divShow"><b><i>Hello Jquery</i></b></div>
+<div id="divHtml"></div>
+<div id="divText"></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery4</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//$("li:first").addClass("getFocus");
+			// $("li:last").addClass("getFocus");
+			// $("li:not(.NotClass)").addClass("getFocus");
+			// $("li:even").addClass("getFocus");
+			// $("li:odd").addClass("getFocus");
+			// $("li:eq(2)").addClass("getFocus");
+			// $("li:gt(1)").addClass("getFocus");
+			$("li:lt(2)").addClass("getFocus");
+		})
+	</script>
+	<style type="text/css">
+		body{font-size:12px;text-align: center}
+		ul{list-style: none;}
+		.DefClass,.NotClass{
+			height:23px;width: 60px;
+			line-height:23px;float:left;
+			border-top:1px solid #eee;
+			border-bottom:1px solid #eee;
+		}
+		.getFocus{
+			width:58px;
+			border:solid 1px #666;
+			background-color:#eee;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li class="DefClass">Item 0</li>
+		<li class="DefClass">Item 1</li>
+		<li class="NotClass">Item 2</li>
+		<li class="DefClass">Item 3</li>
+	</ul>
+</body>
+</html>
